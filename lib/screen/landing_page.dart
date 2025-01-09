@@ -29,28 +29,31 @@ class LandingPageWeb extends StatelessWidget {
               color: Colors.deepOrangeAccent,
             ),
           ),
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Gudang Pakaian Dalam',
-                style: TextStyle(
-                  fontSize: 60.0,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
+          const Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Gudang Pakaian Dalam',
+                  style: TextStyle(
+                    fontSize: 60.0,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              SizedBox(height: 24.0),
-              Text(
-                'One Stop Solution for your Underwear',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  //fontWeight: FontWeight.w900,
-                  color: Colors.white,
+                SizedBox(height: 24.0),
+                Text(
+                  'One Stop Solution for your Underwear',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),

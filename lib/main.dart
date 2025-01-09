@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_gpd/navigation/mobile_navigation.dart';
 import 'package:web_gpd/navigation/web_navigation.dart';
 
 void main() {
@@ -16,7 +17,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WebPageNavigation(),
+      home: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          double width = constraints.maxWidth;
+          if (width < 600) {
+            return const MobilePageNavigation();
+          } else {
+            return const WebPageNavigation();
+          }
+        },
+      ),
     );
   }
 }
