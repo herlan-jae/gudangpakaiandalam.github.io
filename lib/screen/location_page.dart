@@ -39,9 +39,17 @@ class LocationPageWeb extends StatelessWidget {
                       child: Card(
                         color: Colors.white,
                         margin: const EdgeInsets.all(12.0),
-                        child: Image.network(
-                          'https://png.pngtree.com/png-vector/20221104/ourmid/pngtree-cold-calling-isolated-concept-vector-illustration-png-image_6408676.png',
-                          height: size.height * 0.6,
+                        elevation: 5.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: Image.asset(
+                            'assets/ruko.jpg',
+                            height: size.height * 0.6,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
@@ -128,9 +136,17 @@ class LocationPageMobile extends StatelessWidget {
               child: Card(
                 color: Colors.white,
                 margin: const EdgeInsets.all(12.0),
-                child: Image.network(
-                  'https://png.pngtree.com/png-vector/20221104/ourmid/pngtree-cold-calling-isolated-concept-vector-illustration-png-image_6408676.png',
-                  height: size.height * 0.5,
+                elevation: 5.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image.asset(
+                    'assets/ruko.jpg',
+                    height: size.height * 0.5,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

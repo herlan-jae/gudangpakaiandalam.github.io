@@ -17,8 +17,8 @@ class LandingPageWeb extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Image.network(
-            'https://cdn.pixabay.com/photo/2019/02/10/16/38/clothing-3987617_1280.jpg',
+          Image.asset(
+            'assets/hero.png',
             height: size.height,
             width: size.width,
             fit: BoxFit.cover,

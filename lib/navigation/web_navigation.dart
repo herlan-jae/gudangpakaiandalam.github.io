@@ -37,7 +37,6 @@ class _WebPageNavigationState extends State<WebPageNavigation> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: const Icon(Icons.shopping_bag_rounded),
         title: const Text(
           "Gudang Pakaian Dalam",
           style: TextStyle(

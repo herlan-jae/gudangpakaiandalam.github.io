@@ -51,11 +51,9 @@ class _MobilePageNavigationState extends State<MobilePageNavigation> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.deepOrange,
-              ),
-              child: Icon(Icons.shopping_bag_rounded),
+            DrawerHeader(
+              decoration: const BoxDecoration(color: Color(0xFFE1D9D1)),
+              child: Image.asset("assets/cv.png"),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

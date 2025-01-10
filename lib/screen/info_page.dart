@@ -34,13 +34,37 @@ class InfoPageWeb extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                InfoCardWeb(size: size),
+                InfoCardWeb(
+                  size: size,
+                  image: "assets/quality.png",
+                  title: "Kualitas Terjamin",
+                  description:
+                      "Menyediakan berbagai merek pakaian dalam berkualitas tinggi yang terbuat dari bahan pilihan seperti katun, modal, dan microfiber, memastikan kenyamanan dan daya tahan.",
+                ),
                 const SizedBox(width: 24.0),
-                InfoCardWeb(size: size),
+                InfoCardWeb(
+                  size: size,
+                  image: "assets/variation.png",
+                  title: "Beragam Pilihan Produk",
+                  description:
+                      "Menawarkan koleksi lengkap untuk pria, wanita, dan anak-anak, termasuk bra, celana dalam, boxer, singlet, lingerie, saputangan, dan kaos kaki, yang memenuhi kebutuhan berbagai gaya dan preferensi.",
+                ),
                 const SizedBox(width: 24.0),
-                InfoCardWeb(size: size),
+                InfoCardWeb(
+                  size: size,
+                  image: "assets/original.png",
+                  title: "Multi-Brand Terdaftar",
+                  description:
+                      "Setiap produk dari berbagai macam merek yang dijual di Gudang Pakaian Dalam dijamin keasliannya, memastikan pelanggan mendapatkan produk asli dari merek resmi, bebas dari barang palsu atau tiruan.",
+                ),
                 const SizedBox(width: 24.0),
-                InfoCardWeb(size: size),
+                InfoCardWeb(
+                  size: size,
+                  image: "assets/service.png",
+                  title: "Pelayanan Terbaik",
+                  description:
+                      "Menjamin proses pemesanan yang mudah, pengiriman tepat waktu, dan layanan pelanggan yang responsif, memastikan pengalaman berbelanja yang memuaskan dan terpercaya.",
+                ),
               ],
             ),
           ],
@@ -51,9 +75,15 @@ class InfoPageWeb extends StatelessWidget {
 }
 
 class InfoCardWeb extends StatelessWidget {
+  final String image;
+  final String title;
+  final String description;
   const InfoCardWeb({
     super.key,
     required this.size,
+    required this.image,
+    required this.title,
+    required this.description,
   });
 
   final Size size;
@@ -71,23 +101,23 @@ class InfoCardWeb extends StatelessWidget {
           child: Column(
             children: [
               Image.network(
-                'https://png.pngtree.com/png-vector/20221104/ourmid/pngtree-cold-calling-isolated-concept-vector-illustration-png-image_6408676.png',
+                image,
                 height: size.height * 0.2,
               ),
               const SizedBox(height: 24.0),
-              const Text(
-                'Lorem Ipsum',
-                style: TextStyle(
+              Text(
+                title,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24.0,
                   color: Colors.deepOrange,
                 ),
               ),
               const SizedBox(height: 8.0),
-              const Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper, eros eget vulputate venenatis, risus nulla commodo dolor, vel volutpat nisl tortor sit amet lectus. Donec turpis mi, viverra vel massa vitae, ornare ullamcorper eros.',
+              Text(
+                description,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14.0,
                 ),
               )
@@ -129,10 +159,34 @@ class InfoPageMobile extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  InfoCardMobile(size: size),
-                  InfoCardMobile(size: size),
-                  InfoCardMobile(size: size),
-                  InfoCardMobile(size: size),
+                  InfoCardMobile(
+                    size: size,
+                    image: "assets/quality.png",
+                    title: "Kualitas Terjamin",
+                    description:
+                        "Menyediakan berbagai merek pakaian dalam berkualitas tinggi yang terbuat dari bahan pilihan seperti katun, modal, dan microfiber, memastikan kenyamanan dan daya tahan.",
+                  ),
+                  InfoCardMobile(
+                    size: size,
+                    image: "assets/variation.png",
+                    title: "Beragam Pilihan Produk",
+                    description:
+                        "Menawarkan koleksi lengkap untuk pria, wanita, dan anak-anak, termasuk bra, celana dalam, boxer, singlet, lingerie, saputangan, dan kaos kaki, yang memenuhi kebutuhan berbagai gaya dan preferensi.",
+                  ),
+                  InfoCardMobile(
+                    size: size,
+                    image: "assets/original.png",
+                    title: "Multi-Brand Terdaftar",
+                    description:
+                        "Setiap produk dari berbagai macam merek yang dijual di Gudang Pakaian Dalam dijamin keasliannya, memastikan pelanggan mendapatkan produk asli dari merek resmi, bebas dari barang palsu atau tiruan.",
+                  ),
+                  InfoCardMobile(
+                    size: size,
+                    image: "assets/service.png",
+                    title: "Pelayanan Terbaik",
+                    description:
+                        "Menjamin proses pemesanan yang mudah, pengiriman tepat waktu, dan layanan pelanggan yang responsif, memastikan pengalaman berbelanja yang memuaskan dan terpercaya.",
+                  ),
                 ],
               ),
             ),
@@ -145,9 +199,15 @@ class InfoPageMobile extends StatelessWidget {
 }
 
 class InfoCardMobile extends StatelessWidget {
+  final String image;
+  final String title;
+  final String description;
   const InfoCardMobile({
     super.key,
     required this.size,
+    required this.image,
+    required this.title,
+    required this.description,
   });
 
   final Size size;
@@ -169,25 +229,25 @@ class InfoCardMobile extends StatelessWidget {
               children: [
                 Flexible(
                   child: Image.network(
-                    'https://png.pngtree.com/png-vector/20221104/ourmid/pngtree-cold-calling-isolated-concept-vector-illustration-png-image_6408676.png',
+                    image,
                     height: size.height * 0.1,
                     fit: BoxFit.contain,
                   ),
                 ),
                 const SizedBox(height: 12.0),
-                const Text(
-                  'Lorem Ipsum',
-                  style: TextStyle(
+                Text(
+                  title,
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18.0,
                     color: Colors.deepOrange,
                   ),
                 ),
                 const SizedBox(height: 8.0),
-                const Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper, eros eget vulputate venenatis, risus nulla commodo dolor, vel volutpat nisl tortor sit amet lectus. Donec turpis mi, viverra vel massa vitae, ornare ullamcorper eros.',
+                Text(
+                  description,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12.0,
                   ),
                 ),
